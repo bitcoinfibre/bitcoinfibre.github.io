@@ -572,10 +572,10 @@ ul.lead li {
 }
 /*!---------- 5. SECTIONS ----------*/
 .imgborderingtop {
-  padding-top: 96px;
+  padding-top: 10%;
 }
 .imgborderingbottom {
-  padding-bottom: 96px;
+  padding-bottom: 10%;
 }
 section,
 footer {
