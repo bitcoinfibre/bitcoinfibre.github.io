@@ -50,10 +50,6 @@ $(document).ready(function() {
         });
     }, 200);
 
-    // Initialize Tooltips
-
-    $('[data-toggle="tooltip"]').tooltip();
-
     // Icon bulleted lists
 
     $('ul[data-bullet]').each(function(){
@@ -83,12 +79,6 @@ $(document).ready(function() {
 
         if ($(window).width() > 768) {
             $('.parallax:nth-of-type(1) .background-image-holder').css('top', -($('nav').outerHeight(true)));
-        }
-
-        // Adjust fullscreen elements
-
-        if ($(window).width() > 768) {
-            $('section.fullscreen:nth-of-type(1)').css('height', ($(window).height() - $('nav').outerHeight(true)));
         }
 
     } else {
