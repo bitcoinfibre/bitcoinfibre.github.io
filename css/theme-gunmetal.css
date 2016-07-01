@@ -427,7 +427,7 @@ p.lead {
     font-size: 13px;
     line-height: 24px;
   }
-  p {
+  p, pre {
     font-size: 12px;
   }
 }
