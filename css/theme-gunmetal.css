@@ -688,10 +688,11 @@ footer.bg-dark li,
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  opacity: 0;
 }
 .background-image-holder img {
-  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .background-multiply .background-image-holder {
   background-color: #333347 !important;
