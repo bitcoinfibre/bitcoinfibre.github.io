@@ -571,12 +571,6 @@ ul.lead li {
   color: #fff;
 }
 /*!---------- 5. SECTIONS ----------*/
-.imgborderingtop {
-  padding-top: 10%;
-}
-.imgborderingbottom {
-  padding-bottom: 10%;
-}
 section,
 footer {
   padding: 10pt 0;
@@ -5060,106 +5054,106 @@ footer.bg-dark a {
   margin-bottom: 0 !important;
 }
 .mb8 {
-  margin-bottom: 8px;
+  margin-bottom: 0.5vh;
 }
 .mb16 {
-  margin-bottom: 16px;
+  margin-bottom: 1vh;
 }
 .mb24 {
-  margin-bottom: 24px;
+  margin-bottom: 1.5vh;
 }
 .mb30 {
-  margin-bottom: 30px;
+  margin-bottom: 1.87vh;
 }
 .mb32 {
-  margin-bottom: 32px;
+  margin-bottom: 2vh;
 }
 .mb40 {
-  margin-bottom: 40px;
+  margin-bottom: 2.5vh;
 }
 .mb48 {
-  margin-bottom: 48px;
+  margin-bottom: 3vh;
 }
 .mb56 {
-  margin-bottom: 56px;
+  margin-bottom: 3.5vh;
 }
 .mb64 {
-  margin-bottom: 64px;
+  margin-bottom: 4vh;
 }
 .mb72 {
-  margin-bottom: 72px;
+  margin-bottom: 4.5vh;
 }
 .mb80 {
-  margin-bottom: 80px;
+  margin-bottom: 5vh;
 }
 .mb88 {
-  margin-bottom: 88px;
+  margin-bottom: 5.5vh;
 }
 .mb96 {
-  margin-bottom: 96px;
+  margin-bottom: 6vh;
 }
 .mb104 {
-  margin-bottom: 104px;
+  margin-bottom: 6.5vh;
 }
 .mb112 {
-  margin-bottom: 112px;
+  margin-bottom: 7vh;
 }
 .mb120 {
-  margin-bottom: 120px;
+  margin-bottom: 7.5vh;
 }
 .mb160 {
-  margin-bottom: 160px;
+  margin-bottom: 10vh;
 }
 .mt0 {
   margin-top: 0 !important;
 }
 .mt8 {
-  margin-top: 8px;
+  margin-top: 0.5vh;
 }
 .mt16 {
-  margin-top: 16px;
+  margin-top: 1vh;
 }
 .mt24 {
-  margin-top: 24px;
+  margin-top: 1.5vh;
 }
 .mt32 {
-  margin-top: 32px;
+  margin-top: 2vh;
 }
 .mt40 {
-  margin-top: 40px;
+  margin-top: 2.5vh;
 }
 .mt48 {
-  margin-top: 48px;
+  margin-top: 3vh;
 }
 .mt56 {
-  margin-top: 56px;
+  margin-top: 3.5vh;
 }
 .mt64 {
-  margin-top: 64px;
+  margin-top: 4vh;
 }
 .mt72 {
-  margin-top: 72px;
+  margin-top: 4.5vh;
 }
 .mt80 {
-  margin-top: 80px;
+  margin-top: 5vh;
 }
 .mt88 {
-  margin-top: 88px;
+  margin-top: 5.5vh;
 }
 .mt96 {
-  margin-top: 96px;
+  margin-top: 6vh;
 }
 .mt104 {
-  margin-top: 104px;
+  margin-top: 6.5vh;
 }
 .mt112 {
-  margin-top: 112px;
+  margin-top: 7vh;
 }
 .mt120 {
-  margin-top: 120px;
+  margin-top: 7.5vh;
 }
 .mt160 {
-  margin-top: 160px;
+  margin-top: 10vh;
 }
 .p32 {
   padding: 0 32px;
@@ -5174,253 +5168,253 @@ footer.bg-dark a {
   padding-top: 0;
 }
 .pt8 {
-  padding-top: 8px;
+  padding-top: 0.5vh;
 }
 .pt16 {
-  padding-top: 16px;
+  padding-top: 1vh;
 }
 .pt24 {
-  padding-top: 24px;
+  padding-top: 1.5vh;
 }
 .pt32 {
-  padding-top: 32px;
+  padding-top: 2vh;
 }
 .pt40 {
-  padding-top: 40px;
+  padding-top: 2.5vh;
 }
 .pt48 {
-  padding-top: 48px;
+  padding-top: 3vh;
 }
 .pt64 {
-  padding-top: 64px;
+  padding-top: 4vh;
 }
 .pt72 {
-  padding-top: 72px;
+  padding-top: 4.5vh;
 }
 .pt80 {
-  padding-top: 80px;
+  padding-top: 5vh;
 }
 .pt88 {
-  padding-top: 88px;
+  padding-top: 5.5vh;
 }
 .pt96 {
-  padding-top: 96px;
+  padding-top: 6vh;
 }
 .pt104 {
-  padding-top: 104px;
+  padding-top: 6.5vh;
 }
 .pt112 {
-  padding-top: 112px;
+  padding-top: 7vh;
 }
 .pt120 {
-  padding-top: 120px;
+  padding-top: 7.5vh;
 }
 .pt160 {
-  padding-top: 160px;
+  padding-top: 10vh;
 }
 .pt180 {
-  padding-top: 180px;
+  padding-top: 11.25vh;
 }
 .pt240 {
-  padding-top: 240px;
+  padding-top: 15vh;
 }
 .pb0 {
   padding-bottom: 0;
 }
 .pb8 {
-  padding-bottom: 8px;
+  padding-bottom: 0.5vh;
 }
 .pb16 {
-  padding-bottom: 16px;
+  padding-bottom: 1vh;
 }
 .pb24 {
-  padding-bottom: 24px;
+  padding-bottom: 1.5vh;
 }
 .pb32 {
-  padding-bottom: 32px;
+  padding-bottom: 2vh;
 }
 .pb40 {
-  padding-bottom: 40px;
+  padding-bottom: 2.5vh;
 }
 .pb48 {
-  padding-bottom: 48px;
+  padding-bottom: 3vh;
 }
 .pb56 {
-  padding-bottom: 56px;
+  padding-bottom: 3.5vh;
 }
 .pb64 {
-  padding-bottom: 64px;
+  padding-bottom: 4vh;
 }
 .pb72 {
-  padding-bottom: 72px;
+  padding-bottom: 4.5vh;
 }
 .pb80 {
-  padding-bottom: 80px;
+  padding-bottom: 5vh;
 }
 .pb88 {
-  padding-bottom: 88px;
+  padding-bottom: 5.5vh;
 }
 .pb96 {
-  padding-bottom: 96px;
+  padding-bottom: 6vh;
 }
 .pb104 {
-  padding-bottom: 104px;
+  padding-bottom: 6.5vh;
 }
 .pb112 {
-  padding-bottom: 112px;
+  padding-bottom: 7vh;
 }
 .pb120 {
-  padding-bottom: 120px;
+  padding-bottom: 7.5vh;
 }
 .pb160 {
-  padding-bottom: 160px;
+  padding-bottom: 10vh;
 }
 .pb180 {
-  padding-bottom: 180px;
+  padding-bottom: 11.25vh;
 }
 .pb240 {
-  padding-bottom: 240px;
+  padding-bottom: 15vh;
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 990vh) {
   .mb-s-0 {
     margin-bottom: 0;
   }
   .mb-s-8 {
-    margin-bottom: 8px;
+    margin-bottom: 0.5vh;
   }
   .mb-s-16 {
-    margin-bottom: 16px;
+    margin-bottom: 1vh;
   }
   .mb-s-24 {
-    margin-bottom: 24px;
+    margin-bottom: 1.5vh;
   }
   .mb-s-32 {
-    margin-bottom: 32px;
+    margin-bottom: 2vh;
   }
   .mb-s-40 {
-    margin-bottom: 40px;
+    margin-bottom: 2.5vh;
   }
   .mb-s-48 {
-    margin-bottom: 48px;
+    margin-bottom: 3vh;
   }
   .mb-s-64 {
-    margin-bottom: 64px;
+    margin-bottom: 4vh;
   }
   .mb-s-72 {
-    margin-bottom: 72px;
+    margin-bottom: 4.5vh;
   }
   .mb-s-80 {
-    margin-bottom: 80px;
+    margin-bottom: 5vh;
   }
   .mb-s-88 {
-    margin-bottom: 88px;
+    margin-bottom: 5.5vh;
   }
   .mb-s-96 {
-    margin-bottom: 96px;
+    margin-bottom: 6vh;
   }
   .mb-s-104 {
-    margin-bottom: 104px;
+    margin-bottom: 6.5vh;
   }
   .mb-s-112 {
-    margin-bottom: 112px;
+    margin-bottom: 7vh;
   }
   .mb-s-120 {
-    margin-bottom: 120px;
+    margin-bottom: 7.5vh;
   }
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 990vh) {
   .mb-sm-0 {
     margin-bottom: 0;
   }
   .mb-sm-8 {
-    margin-bottom: 8px;
+    margin-bottom: 0.5vh;
   }
   .mb-sm-16 {
-    margin-bottom: 16px;
+    margin-bottom: 1vh;
   }
   .mb-sm-24 {
-    margin-bottom: 24px;
+    margin-bottom: 1.5vh;
   }
   .mb-sm-32 {
-    margin-bottom: 32px;
+    margin-bottom: 2vh;
   }
   .mb-sm-40 {
-    margin-bottom: 40px;
+    margin-bottom: 2.5vh;
   }
   .mb-sm-48 {
-    margin-bottom: 48px;
+    margin-bottom: 3vh;
   }
   .mb-sm-64 {
-    margin-bottom: 64px;
+    margin-bottom: 4vh;
   }
   .mb-sm-72 {
-    margin-bottom: 72px;
+    margin-bottom: 4.5vh;
   }
   .mb-sm-80 {
-    margin-bottom: 80px;
+    margin-bottom: 5vh;
   }
   .mb-sm-88 {
-    margin-bottom: 88px;
+    margin-bottom: 5.5vh;
   }
   .mb-sm-96 {
-    margin-bottom: 96px;
+    margin-bottom: 6vh;
   }
   .mb-sm-104 {
-    margin-bottom: 104px;
+    margin-bottom: 6.5vh;
   }
   .mb-sm-112 {
-    margin-bottom: 112px;
+    margin-bottom: 7vh;
   }
   .mb-sm-120 {
-    margin-bottom: 120px;
+    margin-bottom: 7.5vh;
   }
   .mt-sm-0 {
     margin-top: 0 !important;
   }
   .mt-sm-8 {
-    margin-top: 8px;
+    margin-top: 0.5vh;
   }
   .mt-sm-16 {
-    margin-top: 16px;
+    margin-top: 1vh;
   }
   .mt-sm-24 {
-    margin-top: 24px;
+    margin-top: 1.5vh;
   }
   .mt-sm-32 {
-    margin-top: 32px;
+    margin-top: 2vh;
   }
   .mt-sm-40 {
-    margin-top: 40px;
+    margin-top: 2.5vh;
   }
   .mt-sm-48 {
-    margin-top: 48px;
+    margin-top: 3vh;
   }
   .mt-sm-56 {
-    margin-top: 56px;
+    margin-top: 3.5vh;
   }
   .mt-sm-64 {
-    margin-top: 64px;
+    margin-top: 4vh;
   }
   .mt-sm-72 {
-    margin-top: 72px;
+    margin-top: 4.5vh;
   }
   .mt-sm-80 {
-    margin-top: 80px;
+    margin-top: 5vh;
   }
   .mt-sm-88 {
-    margin-top: 88px;
+    margin-top: 5.5vh;
   }
   .mt-sm-96 {
-    margin-top: 96px;
+    margin-top: 6vh;
   }
   .mt-sm-104 {
-    margin-top: 104px;
+    margin-top: 6.5vh;
   }
   .mt-sm-112 {
-    margin-top: 112px;
+    margin-top: 7vh;
   }
   .mt-sm-120 {
-    margin-top: 120px;
+    margin-top: 7.5vh;
   }
   .p0-sm {
     padding: 0;
@@ -5429,189 +5423,189 @@ footer.bg-dark a {
     padding-top: 0;
   }
   .pt-sm-8 {
-    padding-top: 8px;
+    padding-top: 0.5vh;
   }
   .pt-sm-16 {
-    padding-top: 16px;
+    padding-top: 1vh;
   }
   .pt-sm-24 {
-    padding-top: 24px;
+    padding-top: 1.5vh;
   }
   .pt-sm-32 {
-    padding-top: 32px;
+    padding-top: 2vh;
   }
   .pt-sm-40 {
-    padding-top: 40px;
+    padding-top: 2.5vh;
   }
   .pt-sm-48 {
-    padding-top: 48px;
+    padding-top: 3vh;
   }
   .pt-sm-64 {
-    padding-top: 64px;
+    padding-top: 4vh;
   }
   .pt-sm-72 {
-    padding-top: 72px;
+    padding-top: 4.5vh;
   }
   .pt-sm-80 {
-    padding-top: 80px;
+    padding-top: 5vh;
   }
   .pt-sm-88 {
-    padding-top: 88px;
+    padding-top: 5.5vh;
   }
   .pt-sm-96 {
-    padding-top: 96px;
+    padding-top: 6vh;
   }
   .pt-sm-104 {
-    padding-top: 104px;
+    padding-top: 6.5vh;
   }
   .pt-sm-112 {
-    padding-top: 112px;
+    padding-top: 7vh;
   }
   .pt-sm-120 {
-    padding-top: 120px;
+    padding-top: 7.5vh;
   }
   .pt-sm-160 {
-    padding-top: 160px;
+    padding-top: 10vh;
   }
   .pb-sm-0 {
     padding-bottom: 0;
   }
   .pb-sm-8 {
-    padding-bottom: 8px;
+    padding-bottom: 0.5vh;
   }
   .pb-sm-16 {
-    padding-bottom: 16px;
+    padding-bottom: 1vh;
   }
   .pb-sm-24 {
-    padding-bottom: 24px;
+    padding-bottom: 1.5vh;
   }
   .pb-sm-32 {
-    padding-bottom: 32px;
+    padding-bottom: 2vh;
   }
   .pb-sm-40 {
-    padding-bottom: 40px;
+    padding-bottom: 2.5vh;
   }
   .pb-sm-48 {
-    padding-bottom: 48px;
+    padding-bottom: 3vh;
   }
   .pb-sm-64 {
-    padding-bottom: 64px;
+    padding-bottom: 4vh;
   }
   .pb-sm-72 {
-    padding-bottom: 72px;
+    padding-bottom: 4.5vh;
   }
   .pb-sm-80 {
-    padding-bottom: 80px;
+    padding-bottom: 5vh;
   }
   .pb-sm-88 {
-    padding-bottom: 88px;
+    padding-bottom: 5.5vh;
   }
   .pb-sm-96 {
-    padding-bottom: 96px;
+    padding-bottom: 6vh;
   }
   .pb-sm-104 {
-    padding-bottom: 104px;
+    padding-bottom: 6.5vh;
   }
   .pb-sm-112 {
-    padding-bottom: 112px;
+    padding-bottom: 7vh;
   }
   .pb-sm-120 {
-    padding-bottom: 120px;
+    padding-bottom: 7.5vh;
   }
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 767vh) {
   .mb-xs-0 {
     margin-bottom: 0;
   }
   .mb-xs-8 {
-    margin-bottom: 8px;
+    margin-bottom: 0.5vh;
   }
   .mb-xs-16 {
-    margin-bottom: 16px;
+    margin-bottom: 1vh;
   }
   .mb-xs-24 {
-    margin-bottom: 24px;
+    margin-bottom: 1.5vh;
   }
   .mb-xs-32 {
-    margin-bottom: 32px;
+    margin-bottom: 2vh;
   }
   .mb-xs-40 {
-    margin-bottom: 40px;
+    margin-bottom: 2.5vh;
   }
   .mb-xs-48 {
-    margin-bottom: 48px;
+    margin-bottom: 3vh;
   }
   .mb-xs-64 {
-    margin-bottom: 64px;
+    margin-bottom: 4vh;
   }
   .mb-xs-72 {
-    margin-bottom: 72px;
+    margin-bottom: 4.5vh;
   }
   .mb-xs-80 {
-    margin-bottom: 80px;
+    margin-bottom: 5vh;
   }
   .mb-xs-88 {
-    margin-bottom: 88px;
+    margin-bottom: 5.5vh;
   }
   .mb-xs-96 {
-    margin-bottom: 96px;
+    margin-bottom: 6vh;
   }
   .mb-xs-104 {
-    margin-bottom: 104px;
+    margin-bottom: 6.5vh;
   }
   .mb-xs-112 {
-    margin-bottom: 112px;
+    margin-bottom: 7vh;
   }
   .mb-xs-120 {
-    margin-bottom: 120px;
+    margin-bottom: 7.5vh;
   }
   .mt-xs-0 {
     margin-top: 0 !important;
   }
   .mt-xs-8 {
-    margin-top: 8px;
+    margin-top: 0.5vh;
   }
   .mt-xs-16 {
-    margin-top: 16px;
+    margin-top: 1vh;
   }
   .mt-xs-24 {
-    margin-top: 24px;
+    margin-top: 1.5vh;
   }
   .mt-xs-32 {
-    margin-top: 32px;
+    margin-top: 2vh;
   }
   .mt-xs-40 {
-    margin-top: 40px;
+    margin-top: 2.5vh;
   }
   .mt-xs-48 {
-    margin-top: 48px;
+    margin-top: 3vh;
   }
   .mt-xs-56 {
-    margin-top: 56px;
+    margin-top: 3.5vh;
   }
   .mt-xs-64 {
-    margin-top: 64px;
+    margin-top: 4vh;
   }
   .mt-xs-72 {
-    margin-top: 72px;
+    margin-top: 4.5vh;
   }
   .mt-xs-80 {
-    margin-top: 80px;
+    margin-top: 5vh;
   }
   .mt-xs-88 {
-    margin-top: 88px;
+    margin-top: 5.5vh;
   }
   .mt-xs-96 {
-    margin-top: 96px;
+    margin-top: 6vh;
   }
   .mt-xs-104 {
-    margin-top: 104px;
+    margin-top: 6.5vh;
   }
   .mt-xs-112 {
-    margin-top: 112px;
+    margin-top: 7vh;
   }
   .mt-xs-120 {
-    margin-top: 120px;
+    margin-top: 7.5vh;
   }
   .p0-xs {
     padding: 0;
@@ -5620,105 +5614,105 @@ footer.bg-dark a {
     padding-top: 0;
   }
   .pt-xs-8 {
-    padding-top: 8px;
+    padding-top: 0.5vh;
   }
   .pt-xs-16 {
-    padding-top: 16px;
+    padding-top: 1vh;
   }
   .pt-xs-24 {
-    padding-top: 24px;
+    padding-top: 1.5vh;
   }
   .pt-xs-32 {
-    padding-top: 32px;
+    padding-top: 2vh;
   }
   .pt-xs-40 {
-    padding-top: 40px;
+    padding-top: 2.5vh;
   }
   .pt-xs-48 {
-    padding-top: 48px;
+    padding-top: 3vh;
   }
   .pt-xs-64 {
-    padding-top: 64px;
+    padding-top: 4vh;
   }
   .pt-xs-72 {
-    padding-top: 72px;
+    padding-top: 4.5vh;
   }
   .pt-xs-80 {
-    padding-top: 80px;
+    padding-top: 5vh;
   }
   .pt-xs-88 {
-    padding-top: 88px;
+    padding-top: 5.5vh;
   }
   .pt-xs-96 {
-    padding-top: 96px;
+    padding-top: 6vh;
   }
   .pt-xs-104 {
-    padding-top: 104px;
+    padding-top: 6.5vh;
   }
   .pt-xs-112 {
-    padding-top: 112px;
+    padding-top: 7vh;
   }
   .pt-xs-120 {
-    padding-top: 120px;
+    padding-top: 7.5vh;
   }
   .pt-xs-160 {
-    padding-top: 160px;
+    padding-top: 10vh;
   }
   .pt-xs-180 {
-    padding-top: 180px;
+    padding-top: 11.25vh;
   }
   .pt-xs-240 {
-    padding-top: 240px !important;
+    padding-top: 25vh !important;
   }
   .pb-xs-0 {
     padding-bottom: 0;
   }
   .pb-xs-8 {
-    padding-bottom: 8px;
+    padding-bottom: 0.5vh;
   }
   .pb-xs-16 {
-    padding-bottom: 16px;
+    padding-bottom: 1vh;
   }
   .pb-xs-24 {
-    padding-bottom: 24px;
+    padding-bottom: 1.5vh;
   }
   .pb-xs-32 {
-    padding-bottom: 32px;
+    padding-bottom: 2vh;
   }
   .pb-xs-40 {
-    padding-bottom: 40px;
+    padding-bottom: 2.5vh;
   }
   .pb-xs-48 {
-    padding-bottom: 48px;
+    padding-bottom: 3vh;
   }
   .pb-xs-64 {
-    padding-bottom: 64px;
+    padding-bottom: 4vh;
   }
   .pb-xs-72 {
-    padding-bottom: 72px;
+    padding-bottom: 4.5vh;
   }
   .pb-xs-80 {
-    padding-bottom: 80px;
+    padding-bottom: 5vh;
   }
   .pb-xs-88 {
-    padding-bottom: 88px;
+    padding-bottom: 5.5vh;
   }
   .pb-xs-96 {
-    padding-bottom: 96px;
+    padding-bottom: 6vh;
   }
   .pb-xs-104 {
-    padding-bottom: 104px;
+    padding-bottom: 6.5vh;
   }
   .pb-xs-112 {
-    padding-bottom: 112px;
+    padding-bottom: 7vh;
   }
   .pb-xs-120 {
-    padding-bottom: 120px;
+    padding-bottom: 7.5vh;
   }
   .pb-xs-180 {
-    padding-bottom: 180px;
+    padding-bottom: 11.25vh;
   }
   .pb-xs-240 {
-    padding-bottom: 240px !important;
+    padding-bottom: 15vh !important;
   }
 }
