@@ -49,11 +49,10 @@
 				<!--end of container-->
 			</section>
 
-			<section class="mt48">
+			<section class="mt8">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
-							<h3 class="uppercase color-primary mb40 mb-xs-24">Introduction</h3>
 							<p class="lead"><br>The following is a technical description of how to set up a Bitcoin FIBRE-based network, it assumes you have read and understood <a href="index.html">the higher-level description of operation</a>.<br>
 							</p>
 						</div>
@@ -65,29 +64,23 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
-							<h3 class="uppercase color-primary mb40 mb-xs-24">Software Description</h3>
-							<p class="lead"><br>The Fast Internet Bitcoin Relay Engine (FIBRE) codebase is designed as an extension to Bitcoin Core which allows it to allow for very fast relay with manually selected peers over UDP. It has not (yet) been updated for SegWit's recent merge, but is based on Bitcoin Core immediately prior to it. Note that it adds an additional dependency on yasm for asm-based SHA256 and currently has a different license than the rest of Bitcoin Core which is much more restrictive.<br><br>To run it, run Bitcoin Core as you normally would with the patches from the TheBlueMatt/udp-wip tree on GitHub applied. Add the -udpport option to the command line or bitcoin.conf, set to an unfiltered UDP port on which communication will take place. For each peer, either add a -trustedudpnode or -addudpnode option to the command line or bitcoin.conf, or add them at runtime using the addudpnode RPC command.<br><br>By default, outbound bandwidth usage will be a constant 1Gbps when transmitting (a few MB per block), and thus it should generally be run with a network which can support this. For slower networks, the `target_bytes_per_sec` constant in src/ udpnet.cpp can be tweaked accordingly. Note, of course, that if the latency between two peers is similar to the time required to transmit a few hundred KB (ie you have very low bandwidth available), using regular compact blocks may be faster.<br><br>Note that the FIBRE codebase is still relatively new, and while has been incredibly stable in testing, bugs should be expected, and detailed benchmarking and optimization would be much appreciated.<br>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<div class="post-snippet mb64">
-								<div class="post-title">
-									<h4 class="inline-block">Setting up nodes</h4>
+							<div class="post-snippet mb8">
+								<div class="post-title mb0">
+									<h4 class="inline-block mb8">Node Setup</h4>
 								</div>
 								<hr>
+
+								<p>The Fast Internet Bitcoin Relay Engine (FIBRE) codebase is designed as an extension to Bitcoin Core which allows it to allow for very fast relay with manually selected peers over UDP. It has not (yet) been updated for SegWit's recent merge, but is based on Bitcoin Core immediately prior to it. Note that it currently has a different license than the rest of Bitcoin Core which is much more restrictive.</p>
+								<p>To run it, run Bitcoin Core as you normally would, with the version from <a href="https://github.com/bitcoinfibre/bitcoinfibre">the FIBRE github</a> (a dependency on yasm for asm-based SHA256 has been added). Add the -udpport option to the command line or bitcoin.conf, set to an unfiltered UDP port on which communication will take place. For each peer, either add a -trustedudpnode or -addudpnode option to the command line or bitcoin.conf, or add them at runtime using the addudpnode RPC command.<br><br>By default, outbound bandwidth usage will be a constant 1Gbps when transmitting (a few MB per block), and thus it should generally be run with a network which can support this. For slower networks, the `target_bytes_per_sec` constant in src/ udpnet.cpp can be tweaked accordingly. Note, of course, that if the latency between two peers is similar to the time required to transmit a few hundred KB (ie you have very low bandwidth available), using regular compact blocks may be faster.<br><br>Note that the FIBRE codebase is still relatively new, and while has been incredibly stable in testing, bugs should be expected, and detailed benchmarking and optimization would be much appreciated.<br>
+								</p>
+
 								<p class="lead">Node settings</p>
 								<p>There is a distinction between how we relay packets between "trusted nodes" and "untrusted nodes". Due to the nature of our FEC encoding, we cannot know if individual packets are a part of a legitimate block (or even part of a block), and thus relaying them on to our other peers before we have reconstructed that block would both waste our own bandwidth (potentially at the same time as we want to be relaying a legitimate block) and potentially break block reconstruction. However, for those running a network with multiple nodes around the world, it is reasonable for those servers to trust each other. For such networks, packets from "trusted nodes" will immediately be relayed on to all other peers, adding almost no overhead for additional nodes.
 								</p>
-								<p>
-									The FIBRE codebase is fully-tested with IPv6 and also works well through NAT. As long as both peers add each other as UDP peers using their public IPs, most NAT routers will automatically add the required entries to the NAT table and packets will flow normally (obvious caveats about using FIBRE on low-bandwidth connections apply).
+
+								<p>The FIBRE codebase is fully-tested with IPv6 and also works well through NAT. As long as both peers add each other as UDP peers using their public IPs, most NAT routers will automatically add the required entries to the NAT table and packets will flow normally (obvious caveats about using FIBRE on low-bandwidth connections apply).
 								</p>
+
 								<p class="lead">How to Know It's Working</p>
 								<p>Logging in the FIBRE codebase is accomplished through the standard Bitcoin Core debug.log. Some additional log entries are generated with -debug=bench and -debug=udpnet.&nbsp;A sample log for block relay might look like this (with comments at the end of lines on what they represent):</p>
 								<pre>
@@ -191,7 +184,7 @@
 					<div class="row">
 						<div class="col-sm-12 text-center">
 							<h4 class="mb16">Frequently asked questions</h4>
-							<p class="lead mb64">
+							<p class="lead mb32">
 								If you have any more questions not covered in this FAQ please get in touch.</p>
 						</div>
 					</div>

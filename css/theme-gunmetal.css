@@ -5270,7 +5270,7 @@ footer.bg-dark a {
 .pb240 {
   padding-bottom: 15vh;
 }
-@media all and (max-width: 990vh) {
+@media all and (max-width: 990px) {
   .mb-s-0 {
     margin-bottom: 0;
   }
@@ -5317,7 +5317,7 @@ footer.bg-dark a {
     margin-bottom: 7.5vh;
   }
 }
-@media all and (max-width: 990vh) {
+@media all and (max-width: 990px) {
   .mb-sm-0 {
     margin-bottom: 0;
   }
@@ -5508,7 +5508,7 @@ footer.bg-dark a {
     padding-bottom: 7.5vh;
   }
 }
-@media all and (max-width: 767vh) {
+@media all and (max-width: 767px) {
   .mb-xs-0 {
     margin-bottom: 0;
   }
