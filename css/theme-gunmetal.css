@@ -64,8 +64,8 @@ body.boxed-layout,
   left: 0;
   right: 0;
 }
-ul {
-  list-style: none;
+ul.menu {
+	list-style: none;
 }
 ul.bullets {
   list-style: inside;
@@ -263,8 +263,7 @@ h4,
 h5,
 h6,
 p,
-ul,
-ol,
+ul:not(.menu) li,
 pre,
 table,
 blockquote,
@@ -409,7 +408,8 @@ h6.uppercase,
   font-weight: 700;
 }
 p,
-span {
+span,
+ul:not(.menu) li {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -427,7 +427,7 @@ p.lead {
     font-size: 13px;
     line-height: 24px;
   }
-  p, pre {
+  p, pre, ul:not(.menu) li {
     font-size: 12px;
   }
 }
