@@ -91,55 +91,57 @@
 								</p>
 								<p class="lead">How to Know It's Working</p>
 								<p>Logging in the FIBRE codebase is accomplished through the standard Bitcoin Core debug.log. Some additional log entries are generated with -debug=bench and -debug=udpnet.&nbsp;A sample log for block relay might look like this (with comments at the end of lines on what they represent):</p>
-								<blockquote># FEC notice that something was decoded (-debug=fec):
-		<br>2016-06-27 01:25:37.934908 FEC: Decoding complete
-		<br># Internal timings in the first InitData (-debug=bench):
-		<br>2016-06-27 01:25:37.935600 PartiallyDownloadedBlock::InitData took 0.004304 0.077074 0.244742 ms
-		<br># Internal timings in the second InitData, including the first InitData (-debug=bench):
-		<br>2016-06-27 01:25:37.938483 PartiallyDownloadedChunkBlock::InitData took 0.414497 0.224764 0.137372 2.433110 ms
-		<br># When the final packet of the block header (the compact block cmpctblock message, with some additional data) is received and processed, you'll see something like (the timings are only present with -debug=bench)
-		<br>2016-06-27 01:25:37.938563 UDP: Got full header and shorttxids from [2604:180:2::XXXX]:8282 in 0.000588 0.182621 3.282659 ms
-		<br># With -debug=bench, individual packets that take longer than 1ms to process will generate a debug print:
-		<br>2016-06-27 01:25:37.938611 UDP: Packet took 3.705872 ms to process
-		<br># On the next packet, if we couldn't reconstruct the entire block from mempool, we initialize the FEC decoder, with as much as we can from mempool:
-		<br>2016-06-27 01:25:37.940387 UDP: Initialized block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 with 639/975 mempool-provided chunks
-		<br>2016-06-27 01:25:37.940496 UDP: Packet took 1.245908 ms to process
-		<br>2016-06-27 01:25:37.948609 UDP: Packet took 1.035811 ms to process
-		<br>2016-06-27 01:25:37.970034 FEC: Decoding complete
-		<br># Internal timings in the block-filler (-debug=bench):
-		<br>2016-06-27 01:25:37.978776 PartiallyDownloadedChunkBlock::GetBlock took 5.851342 2.653402 ms
-		<br># When we've received all the block data, after some processing and handing it off to a background thread to process it, we print some decoding stats (-debug=bench):
-		<br># Note that the time here is critical: it is the time from when the first packet about this block was received until this print. This time puts the first packet receive at 2016-06-27 01:25:37.932538
-		<br># The two chunk counts here and in the per-peer stats represent the number of chunks (packets) which we used to decode the block (non-duplicate chunks sent to the FEC engine)
-		<br># Thus, only the second chunk counts packets we received containing chunks which we generated from mempool, had already received from another peer, or were a part of the header after we had already processed the header
-		<br>2016-06-27 01:25:37.978911 UDP: Block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 reconstructed from [2604:180:2::XXXX]:8282 with 475 chunks in 46.373000 ms (531 recvd from 2 peers)
-		<br>2016-06-27 01:25:37.978970 UDP:    401/451 used from [2604:180:2::XXXX]:8282
-		<br>2016-06-27 01:25:37.979015 UDP:    74/80 used from [2604:180:3::3845]:8282
-		<br>2016-06-27 01:25:37.979055 UDP: Packet took 9.321480 ms to process
-		<br># After we have done SPV validation of the block, we build the FEC chunks we did not already have to send them off to our other peers (the timing and first print are only present with -debug=bench)
-		<br>2016-06-27 01:25:37.982941 UDP: Building FEC chunks from decoded block
-		<br>2016-06-27 01:25:37.990111 UDP: Built all FEC chunks for block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 in 7.137531 ms
-		<br># For the purposes of the stats page, the encoded block size is printed with -debug=bench
-		<br>2016-06-27 01:25:37.990355 UDP: Block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 had serialized size 998162
-		<br>2016-06-27 01:25:37.990584 UDP: Packet took 7.630107 ms to process
-		<br># Standard AcceptBlock -debug=bench content follows:
-		<br>2016-06-27 01:25:37.991760   - Load block from disk: 0.00ms [5.24s]
-		<br>2016-06-27 01:25:37.991816     - Sanity checks: 0.00ms [5.07s]
-		<br>2016-06-27 01:25:37.991902     - Fork checks: 0.08ms [0.18s]
-		<br>2016-06-27 01:25:38.004593 UDP: Packet took 2.023104 ms to process
-		<br>2016-06-27 01:25:38.208795 UDP: Packet took 1.142253 ms to process
-		<br>2016-06-27 01:25:38.344671       - Connect 694 transactions: 352.74ms (0.508ms/tx, 0.064ms/txin) [225.27s]
-		<br>2016-06-27 01:25:38.351640     - Verify 5501 txins: 359.72ms (0.065ms/txin) [295.98s]
-		<br>2016-06-27 01:25:38.357546     - Index writing: 5.91ms [3.02s]
-		<br>2016-06-27 01:25:38.357673     - Callbacks: 0.14ms [0.06s]
-		<br>2016-06-27 01:25:38.357837   - Connect total: 366.07ms [304.59s]
-		<br>2016-06-27 01:25:38.368921   - Flush: 10.93ms [4.79s]
-		<br>2016-06-27 01:25:38.369182   - Writing chainstate: 0.42ms [31.94s]
-		<br>2016-06-27 01:25:38.384789 UpdateTip: new best=0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 height=418141 version=0x20000001 log2_work=84.895644 tx=138736070 date='2016-06-27 01:25:03' progress=1.000000 cache=74.1MiB(37843tx) warning='4 of last 100 blocks have unexpected version'
-		<br>2016-06-27 01:25:38.385034   - Connect postprocess: 15.86ms [2.85s]
-		<br>2016-06-27 01:25:38.385090 - Connect block: 393.28ms [349.41s]
-		<br># This line might be duplicated if the block was also provided by a non-UDP peer (in this case the relay network client):
-		<br>2016-06-27 01:25:38.385174 UDP: Block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 had serialized size 998162</blockquote>
+								<pre>
+# FEC notice that something was decoded (-debug=fec):
+2016-06-27 01:25:37.934908 FEC: Decoding complete
+# Internal timings in the first InitData (-debug=bench):
+2016-06-27 01:25:37.935600 PartiallyDownloadedBlock::InitData took 0.004304 0.077074 0.244742 ms
+# Internal timings in the second InitData, including the first InitData (-debug=bench):
+2016-06-27 01:25:37.938483 PartiallyDownloadedChunkBlock::InitData took 0.414497 0.224764 0.137372 2.433110 ms
+# When the final packet of the block header (the compact block cmpctblock message, with some additional data) is received and processed, you'll see something like (the timings are only present with -debug=bench)
+2016-06-27 01:25:37.938563 UDP: Got full header and shorttxids from [2604:180:2::XXXX]:8282 in 0.000588 0.182621 3.282659 ms
+# With -debug=bench, individual packets that take longer than 1ms to process will generate a debug print:
+2016-06-27 01:25:37.938611 UDP: Packet took 3.705872 ms to process
+# On the next packet, if we couldn't reconstruct the entire block from mempool, we initialize the FEC decoder, with as much as we can from mempool:
+2016-06-27 01:25:37.940387 UDP: Initialized block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 with 639/975 mempool-provided chunks
+2016-06-27 01:25:37.940496 UDP: Packet took 1.245908 ms to process
+2016-06-27 01:25:37.948609 UDP: Packet took 1.035811 ms to process
+2016-06-27 01:25:37.970034 FEC: Decoding complete
+# Internal timings in the block-filler (-debug=bench):
+2016-06-27 01:25:37.978776 PartiallyDownloadedChunkBlock::GetBlock took 5.851342 2.653402 ms
+# When we've received all the block data, after some processing and handing it off to a background thread to process it, we print some decoding stats (-debug=bench):
+# Note that the time here is critical: it is the time from when the first packet about this block was received until this print. This time puts the first packet receive at 2016-06-27 01:25:37.932538
+# The two chunk counts here and in the per-peer stats represent the number of chunks (packets) which we used to decode the block (non-duplicate chunks sent to the FEC engine)
+# Thus, only the second chunk counts packets we received containing chunks which we generated from mempool, had already received from another peer, or were a part of the header after we had already processed the header
+2016-06-27 01:25:37.978911 UDP: Block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 reconstructed from [2604:180:2::XXXX]:8282 with 475 chunks in 46.373000 ms (531 recvd from 2 peers)
+2016-06-27 01:25:37.978970 UDP:    401/451 used from [2604:180:2::XXXX]:8282
+2016-06-27 01:25:37.979015 UDP:    74/80 used from [2604:180:3::3845]:8282
+2016-06-27 01:25:37.979055 UDP: Packet took 9.321480 ms to process
+# After we have done SPV validation of the block, we build the FEC chunks we did not already have to send them off to our other peers (the timing and first print are only present with -debug=bench)
+2016-06-27 01:25:37.982941 UDP: Building FEC chunks from decoded block
+2016-06-27 01:25:37.990111 UDP: Built all FEC chunks for block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 in 7.137531 ms
+# For the purposes of the stats page, the encoded block size is printed with -debug=bench
+2016-06-27 01:25:37.990355 UDP: Block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 had serialized size 998162
+2016-06-27 01:25:37.990584 UDP: Packet took 7.630107 ms to process
+# Standard AcceptBlock -debug=bench content follows:
+2016-06-27 01:25:37.991760   - Load block from disk: 0.00ms [5.24s]
+2016-06-27 01:25:37.991816     - Sanity checks: 0.00ms [5.07s]
+2016-06-27 01:25:37.991902     - Fork checks: 0.08ms [0.18s]
+2016-06-27 01:25:38.004593 UDP: Packet took 2.023104 ms to process
+2016-06-27 01:25:38.208795 UDP: Packet took 1.142253 ms to process
+2016-06-27 01:25:38.344671       - Connect 694 transactions: 352.74ms (0.508ms/tx, 0.064ms/txin) [225.27s]
+2016-06-27 01:25:38.351640     - Verify 5501 txins: 359.72ms (0.065ms/txin) [295.98s]
+2016-06-27 01:25:38.357546     - Index writing: 5.91ms [3.02s]
+2016-06-27 01:25:38.357673     - Callbacks: 0.14ms [0.06s]
+2016-06-27 01:25:38.357837   - Connect total: 366.07ms [304.59s]
+2016-06-27 01:25:38.368921   - Flush: 10.93ms [4.79s]
+2016-06-27 01:25:38.369182   - Writing chainstate: 0.42ms [31.94s]
+2016-06-27 01:25:38.384789 UpdateTip: new best=0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 height=418141 version=0x20000001 log2_work=84.895644 tx=138736070 date='2016-06-27 01:25:03' progress=1.000000 cache=74.1MiB(37843tx) warning='4 of last 100 blocks have unexpected version'
+2016-06-27 01:25:38.385034   - Connect postprocess: 15.86ms [2.85s]
+2016-06-27 01:25:38.385090 - Connect block: 393.28ms [349.41s]
+# This line might be duplicated if the block was also provided by a non-UDP peer (in this case the relay network client):
+2016-06-27 01:25:38.385174 UDP: Block 0000000000000000051a6e67f907167a3c452b7b32351f4d8c50f36e3d793028 had serialized size 998162
+								</pre>
 								<p>There is code to build a stats page similar to the one at the stats page, which could be made generic with some effort. If folks are interested, please contact me.
 		Please keep in mind, when analyzing times, that clocks on most hosts on the internet can differ by hundreds of milliseconds thanks to NTP's inability to handle path-asymmetry and inconsistent upstream clocks. If you have reliable path-symmetry and are on physical hardware, it is highly recommended that you use NTP's "peer" option and monitor NTP sync stats to get better clock sync.</p>
 							</div>
