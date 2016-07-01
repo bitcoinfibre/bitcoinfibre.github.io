@@ -571,9 +571,15 @@ ul.lead li {
   color: #fff;
 }
 /*!---------- 5. SECTIONS ----------*/
+.imgborderingtop {
+  padding-top: 96px;
+}
+.imgborderingbottom {
+  padding-bottom: 96px;
+}
 section,
 footer {
-  padding: 96px 0;
+  padding: 10pt 0;
   position: relative;
   overflow: hidden;
 }
