@@ -67,6 +67,9 @@ body.boxed-layout,
 ul.menu {
 	list-style: none;
 }
+ul.accordion {
+	list-style: none;
+}
 ul.bullets {
   list-style: inside;
 }
@@ -263,7 +266,7 @@ h4,
 h5,
 h6,
 p,
-ul:not(.menu) li,
+ul:not(.menu):not(.accordion) li,
 pre,
 table,
 blockquote,
@@ -409,7 +412,7 @@ h6.uppercase,
 }
 p,
 span,
-ul:not(.menu) li {
+ul:not(.menu):not(.accordion) li {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -427,7 +430,7 @@ p.lead {
     font-size: 13px;
     line-height: 24px;
   }
-  p, pre, ul:not(.menu) li {
+  p, pre, ul:not(.menu):not(.accordion) li {
     font-size: 12px;
   }
 }
