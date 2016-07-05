@@ -581,6 +581,7 @@ div.footer {
   z-index: -1;
   margin-top: -1px;
   margin-bottom: -1px;
+  transform: translateZ(0px);
 }
 div.section {
   background: #fff;
