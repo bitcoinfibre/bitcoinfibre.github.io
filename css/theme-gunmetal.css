@@ -1343,6 +1343,9 @@ nav .cart-overview a {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
+  nav.duplicate {
+    visibility: hidden !important;
+  }
   .nav-bar,
   .nav-bar .module-group,
   .nav-bar .module {
