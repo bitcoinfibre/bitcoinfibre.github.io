@@ -2932,7 +2932,6 @@ button[type="submit"] .form-loading {
   }
 }
 .page-title.fullscreen {
-  height: 100vh !important;
   padding-top: 0;
 }
 /*!---------- 21. WIDGETS ----------*/
