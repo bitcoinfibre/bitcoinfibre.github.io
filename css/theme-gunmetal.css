@@ -581,6 +581,8 @@ div.footer {
   z-index: -1;
   margin-top: -1px;
   margin-bottom: -1px;
+}
+.parallax-css-root > div.section {
   transform: translateZ(0px);
 }
 div.section {
@@ -1499,9 +1501,6 @@ nav.outOfSight {
   transform: translate3d(0, -200px, 0);
   -webkit-transform: translate3d(0, -200px, 0);
   -moz-transform: translate3d(0, -200px, 0);
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
 }
 nav.scrolled {
   transform: translate3d(0, 0px, 0);
@@ -1510,6 +1509,9 @@ nav.scrolled {
 }
 nav.fixed,
 nav.absolute {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
   top: 0;
   width: 100%;
   z-index: 0;
