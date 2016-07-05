@@ -10,8 +10,28 @@
 		<link href="css/theme-gunmetal.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
 	<body class="scroll-assist">
-		<div class="nav-container">
-			<nav class="bg-dark">
+		<nav class="bg-dark fixed">
+			<div class="nav-bar">
+				<div class="module left">
+					<a href="/"><img class="logo logo-light" alt="FIBRE" src="img/logo-light.png" /></a>
+				</div>
+				<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+					<i class="ti-menu"></i>
+				</div>
+				<div class="module-group right">
+					<div class="module left">
+						<ul class="menu">
+							<li><a href="fibre-howto.html" class="inner-link">Setup Guide</a></li>
+							<li><a href="https://github.com/bitcoinfibre/bitcoinfibre" class="inner-link">Source</a></li>
+							<li><a href="stats_ng.html" class="inner-link">Test Network Stats</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="parallax-css-root">
+			<nav class="bg-dark duplicate">
 				<div class="nav-bar">
 					<div class="module left">
 						<a href="/"><img class="logo logo-light" alt="FIBRE" src="img/logo-light.png" /></a>
@@ -30,9 +50,8 @@
 					</div>
 				</div>
 			</nav>
-		</div>
-		<div class="main-container">
-			<div class="section page-title page-title-1 image-bg overlay parallax">
+
+			<div class="section page-title page-title-1 image-bg overlay parallax-css">
 				<div class="background-image-holder">
 					<img alt="Background Image" class="background-image" src="img/fibre.jpg" />
 				</div>
@@ -47,11 +66,11 @@
 				<!--end of container-->
 			</div>
 
-			<div class="section mt8">
+			<div class="section">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
-							<p class="lead"><br>The following is a technical description of how to set up a FIBRE-based network, it assumes you have read and understood <a href="index.html">the higher-level description of operation</a> and <a href="http://bluematt.bitcoin.ninja/2016/06/06/relay-networks">my blog post on the subject</a>.<br>
+							<p class="lead"><br>The following is a technical description of how to set up a FIBRE-based network, it assumes you have read and understood <a href="index.html">the higher-level description of operation</a> and <a href="http://bluematt.bitcoin.ninja/2016/07/06/relay-networks">my blog post on the subject</a>.<br>
 							</p>
 						</div>
 					</div>
@@ -234,11 +253,5 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/parallax.js"></script>
-		<script src="js/scripts.js"></script>
 	</body>
 </html>

@@ -56,7 +56,6 @@ body.boxed-layout .main-container {
   background: #fff;
 }
 body.boxed-layout,
-.boxed-layout .nav-container,
 .boxed-layout .main-container,
 .boxed-layout nav {
   max-width: 1366px;
@@ -579,6 +578,12 @@ div.footer {
   padding: 10pt 0;
   position: relative;
   overflow: hidden;
+  z-index: -1;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+div.section {
+  background: #fff;
 }
 div.footer {
   padding: 2vh 0;
@@ -679,7 +684,7 @@ div.footer.bg-dark li,
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -4;
   background: #292929;
   background-size: cover !important;
   background-position: 50% 50% !important;
@@ -699,6 +704,33 @@ div.footer.bg-dark li,
 .background-image-holder.fadeIn {
   opacity: 1;
 }
+.parallax-css-root {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform-origin-x: 100%;
+  -webkit-transform-origin-x: 100%;
+  perspective-origin: right;
+}
+.parallax-css {
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: visible !important;
+  background: rgba(0, 0, 0, 0) !important;
+  z-index: -3 !important;
+}
+.parallax-css > .background-image-holder,
+.parallax-css .slides li > .background-image-holder {
+  height: 100vh;
+  transform: translateZ(-2px) scale(3);
+  transform-origin: right;
+  left: -2%; /* WTF? */
+}
+
+.image-slider.parallax {
+  padding-top: 1px;
+}
 .parallax > .background-image-holder,
 .parallax .slides li > .background-image-holder {
   height: 100vh;
@@ -715,6 +747,11 @@ div.footer.bg-dark li,
   top: 0;
 }
 @media all and (max-width: 767px) {
+  .parallax-css > .background-image-holder,
+  .parallax-css .slides li > .background-image-holder {
+    transform: none !important;
+    left: 0 !important;
+  }
   .parallax > .background-image-holder,
   .parallax .slides li > .background-image-holder {
     top: 0 !important;
@@ -855,10 +892,6 @@ body.btn-rounded .btn {
   color: #333347;
 }
 /*!---------- 7. NAVIGATION ----------*/
-.nav-container {
-  -webkit-backface-visibility: hidden;
-  max-width: 100%;
-}
 nav {
   background: #fff;
   -webkit-backface-visibility: hidden;
@@ -1478,17 +1511,22 @@ nav.fixed,
 nav.absolute {
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 0;
   left: 0;
   right: 0;
 }
+nav.duplicate {
+  z-index: 1001;
+  position: relative;
+}
+
 nav.absolute {
   position: absolute;
 }
 nav.fixed {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
 }
 nav.fixed .nav-utility {
   display: none;
@@ -2818,14 +2856,16 @@ button[type="submit"] .form-loading {
 }
 /*!---------- 20. PAGE TITLES ----------*/
 .page-title {
+  position: relative;
   padding: 0;
+  z-index: -2;
 }
 .page-title .container {
   position: relative;
   transform: translate3d(0, -50%, 0);
   -webkit-transform: translate3d(0, -50%, 0);
   top: 50%;
-  z-index: 2;
+  z-index: -2;
 }
 .page-title i {
   position: relative;
@@ -2838,7 +2878,8 @@ button[type="submit"] .form-loading {
 }
 .page-title-1,
 .page-title-2 {
-  height: 400px;
+  height: 25vh;
+  min-height: 200px;
 }
 .page-title-1 .breadcrumb,
 .page-title-3 .breadcrumb {
@@ -2862,7 +2903,8 @@ button[type="submit"] .form-loading {
 @media all and (max-width: 767px) {
   .page-title-1,
   .page-title-2 {
-    height: 320px;
+    height: 25vh;
+	min-height: auto;
   }
 }
 .page-title-3,
